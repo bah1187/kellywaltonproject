@@ -4,40 +4,48 @@
 #logo {
 height:  100px;
 width:   300px;
-padding-left: 200px;
-border-style: solid;
+position: relative;
+left:10px;
+background-color: rgba(0,0,0,0.4);
+padding-top: 20px;
+margin-top: -10px;
+padding-bottom: 30px;
+padding-left: 15px;
+opacity: .9;
+
+
+
 }
+
 
 nav {
-text-align: center;
-border-style: solid;
+position: relative;
+bottom: 150px;
+left: 340px;
+
+background-color: rgba(0,0,0,0.4);
+opacity: .9;
+height: 50px;
+max-width: 500px;
+margin-top: -6px;
+padding-top: 10px;
+font-family: 'Droid Serif', serif;
+color: white;
 }
 
-nav li::before{
-content: "|"
 
-}
 
-nav li:first-child::before{
-content: "";
-
-}
 
 nav li {
 display: inline;
 padding-right: 20px;
-
-
-
-}
-
-header {
-border-style: solid;
-height: 200px;
-text-align: center;
+margin: 0;
+color: white;
 
 
 }
+
+
 
 
 #instagram {
@@ -69,35 +77,69 @@ width: 25px;
 }
 
 .social {
-border-style: solid;
+
 float: right;
 }
 
 /*Picture slide show*/
 
 #table {
-
-width: 100%;
+width: 600px;
 height: 450px;
 
+position: relative;
+top: 30px;
+right: 300px;
+}
+
+
+/*body main*/
+
+body {
+background-color: #333333;
 
 }
 
-/*body*/
 
-p {
 
-text-align: center;
+/*body about*/
 
+#bio {
+position: relative;
+left: 10px;
+max-width: 1000px;
+padding-left: 30px;
+
+background-color: rgba(0, 0, 0, 0.4);
+opacity: 0.9;
+}
+
+#bio, h1, h2, p {
+
+  color: white;
 }
 
 
 footer  {
 text-align: center;
 background-color: whitesmoke;
-
+position: relative;
 }
+
+
 
 footer img {
   height: 50px;
+}
+
+
+/*links*/
+ a:visited {
+
+color: white;
+}
+
+a:hover {
+  border-bottom-style: solid;
+  border-color: maroon;
 }
