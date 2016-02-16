@@ -1,50 +1,81 @@
 
+
+/*mobile*/
+
 /*Heading*/
 
-#logo {
-height:  100px;
-width:   300px;
-position: relative;
-left:10px;
-background-color: rgba(0,0,0,0.4);
-padding-top: 20px;
-margin-top: -10px;
-padding-bottom: 30px;
-padding-left: 15px;
-opacity: .9;
+header {
+  margin-top: 0;
+
+}
+
+.logo img{
+  height:  120px;
+  width:   250px;
+  background-color: rgba(0,0,0,0.4);
+  padding-top:10px;
+  margin-top: 0;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  opacity: .9;
+
 
 
 
 }
 
+.logo{
+  text-align: center;
 
-nav {
+
+}
+
+.menu-icon img{
+  width: 65px;
+  height: 55px;
+  background-color: rgba(0,0,0,0.4);
+  padding-left: 22px;
+  padding-top: 20px;
+  margin-bottom: 95px;
+}
+
+
+.menu-icon {
+position: fixed;
+}
+
+.nav {
 position: relative;
-bottom: 150px;
-left: 340px;
-
+padding-top: 7px;
+padding-bottom: 7px;
+padding-right: 27px;
+margin-top: 3px;
 background-color: rgba(0,0,0,0.4);
 opacity: .9;
-height: 50px;
-max-width: 500px;
-margin-top: -6px;
-padding-top: 10px;
+display:block;
 font-family: 'Droid Serif', serif;
 color: white;
+
 }
 
 
-
-
-nav li {
-display: inline;
-padding-right: 20px;
+.nav li {
+display: block;
+padding-right: 10px;
 margin: 0;
 color: white;
 
-
 }
 
+
+
+
+
+ul a {
+padding: 1px 1px;
+display: block;
+
+}
 
 
 
@@ -95,51 +126,188 @@ right: 300px;
 
 /*body main*/
 
-body {
-background-color: #333333;
+* {
+box-sizing: border-box;
 
 }
+
+body{
+background: url("images1/background.jpg") no-repeat center;
+background-size: 100% 350px;
+background-color: #333;
+background-attachment: fixed;
+}
+
+
+
+
+
+
 
 
 
 /*body about*/
 
-#bio {
-position: relative;
-left: 10px;
-max-width: 1000px;
-padding-left: 30px;
-
-background-color: rgba(0, 0, 0, 0.4);
-opacity: 0.9;
+.bio{
+background-color: rgba(0,0,0,0.4);
+margin-top: 30px;
+padding-top: 10px;
+padding-left: 10px;
+padding-bottom: 10px;
+padding-right: 10px;
 }
 
-#bio, h1, h2, p {
+.bio img {
+height: 250px;
+width:170px;
+border: 10px solid #fff;
+border-bottom: 45px solid #fff;
+-webkit-box-shadow: 3px 3px 3px #777;
+ -moz-box-shadow: 3px 3px 3px #777;
+box-shadow: 3px 3px 3px #777;
 
+
+}
+
+.bio p {
+color: white;
+font-family: "droid",serif;
+}
+
+/*body portfolio*/
+
+.gallery {
+background-color: rgba(0,0,0,0.4);
+margin-top: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+}
+
+.gallery img {
+height:200px;
+width: 200px;
+border: 7px solid #fff;
+
+}
+
+/*body services*/
+
+.service {
+  background-color: rgba(0,0,0,0.4);
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.service p {
   color: white;
+  font-family: "droid", serif;
 }
 
+.service h2 {
+  color: white;
+  font-family: "droid",serif;
+}
+
+
+/*links*/
+ a:visited {
+text-decoration: none;
+
+}
+
+a:hover {
+  border-bottom-style: solid;
+  border-color: maroon;
+}
+
+a {
+text-decoration: none;
+color: white;
+}
+
+a:active {
+border-bottom-style: solid;
+border-color: maroon;
+
+}
+
+/*Layout containers*/
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 
 footer  {
 text-align: center;
-background-color: whitesmoke;
-position: relative;
+
+
 }
 
 
 
 footer img {
   height: 50px;
+  width: 50px;
 }
 
+.wrap {
+  min-height: calc(100vh - 54px);
 
-/*links*/
- a:visited {
+  }
 
-color: white;
+/*Media queries*/
+/*tablet*/
+
+@media (min-width: 769px) {
+  .container {
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.wrap {
+  min-height: calc(100vh - 54px);
+
+  }
+
+nav {
+  float: right;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background-color: rgba(0,0,0,0.4);
+  opacity: .9;
+  display:inline-block;
+  font-family: 'Droid Serif', serif;
+  color: white;
+  }
+
+nav li {
+  display:inline-block;
+  padding-right: 15px;
+  margin: 0;
+  color: white;
+
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+
 }
 
-a:hover {
-  border-bottom-style: solid;
-  border-color: maroon;
+}
+
+/*desktop*/
+@media (min-width: 1025px) {
+
+
+
+
+
 }
