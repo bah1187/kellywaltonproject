@@ -182,13 +182,15 @@ margin-top: 10px;
 padding-top: 10px;
 padding-bottom: 10px;
 text-align: center;
+margin-bottom: 10px;
 }
 
 .gallery img {
 height:200px;
 width: 200px;
-border: 7px solid #fff;
-
+border: 5px solid #fff;
+margin-right: 5px;
+margin-bottom: 5px;
 }
 
 /*body services*/
