@@ -9,6 +9,7 @@ header {
 
 }
 
+
 .logo img{
   height:  120px;
   width:   250px;
@@ -42,28 +43,29 @@ header {
 
 .menu-icon {
 position: fixed;
+height: 35px;
 }
 
-.nav {
-position: relative;
-padding-top: 7px;
-padding-bottom: 7px;
-padding-right: 27px;
-margin-top: 3px;
+
+
+ul{
+display: none;
+
+}
+
+.show {
+
+padding-top: 10px;
 background-color: rgba(0,0,0,0.4);
 opacity: .9;
 display:block;
 font-family: 'Droid Serif', serif;
 color: white;
-
 }
 
-
-.nav li {
-display: block;
-padding-right: 10px;
-margin: 0;
-color: white;
+ li {
+display:block;
+padding-bottom: 5px;
 
 }
 
@@ -79,49 +81,12 @@ display: block;
 
 
 
-#instagram {
-
-height: 25px;
-width: 25px;
-padding-right: 3px
 
 
-}
-
-#twitter {
-
-height: 25px;
-width: 25px;
-
-}
-
-#pinterest {
-height: 25px;
-width: 25px;
-
-}
-
-#facebook {
-height: 25px;
-width: 25px;
-
-}
-
-.social {
-
-float: right;
-}
 
 /*Picture slide show*/
 
-#table {
-width: 600px;
-height: 450px;
 
-position: relative;
-top: 30px;
-right: 300px;
-}
 
 
 /*body main*/
@@ -237,6 +202,10 @@ a:active {
 border-bottom-style: solid;
 border-color: maroon;
 
+}
+
+.menu-icon a:hover {
+  border-bottom-style: none;
 }
 
 /*Layout containers*/
