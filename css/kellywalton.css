@@ -13,7 +13,7 @@ header {
 .logo img{
   height:  120px;
   width:   250px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   padding-top:10px;
   margin-top: 0;
   padding-bottom: 15px;
@@ -34,7 +34,7 @@ header {
 .menu-icon img{
   width: 65px;
   height: 55px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   padding-left: 22px;
   padding-top: 20px;
   margin-bottom: 95px;
@@ -47,26 +47,49 @@ height: 35px;
 }
 
 
-
-ul{
-display: none;
-
+.jcarousel{
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
 }
 
-.show {
 
+
+    .jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+  width: 400px;
+  height: 400px;
+    float: left;
+}
+
+
+.nav ul {
 padding-top: 10px;
-background-color: rgba(0,0,0,0.4);
+background-color: rgba(0,0,0,0.7);
 opacity: .9;
-display:block;
+display:none;
 font-family: 'Droid Serif', serif;
 color: white;
+display: none;
+}
+
+.starline{
+text-align: center;
+
 }
 
  li {
-display:block;
+display:flex;
 padding-bottom: 5px;
-
+padding-top: 5px;
 }
 
 
@@ -114,7 +137,7 @@ background-attachment: fixed;
 /*body about*/
 
 .bio{
-background-color: rgba(0,0,0,0.4);
+background-color: rgba(0,0,0,0.7);
 margin-top: 30px;
 padding-top: 10px;
 padding-left: 10px;
@@ -123,15 +146,9 @@ padding-right: 10px;
 }
 
 .bio img {
-height: 250px;
-width:170px;
-border: 10px solid #fff;
-border-bottom: 45px solid #fff;
--webkit-box-shadow: 3px 3px 3px #777;
- -moz-box-shadow: 3px 3px 3px #777;
-box-shadow: 3px 3px 3px #777;
-
-
+border-radius: 50%;
+height: 175px;
+width: 175px;
 }
 
 .bio p {
@@ -142,7 +159,7 @@ font-family: "droid",serif;
 /*body portfolio*/
 
 .gallery {
-background-color: rgba(0,0,0,0.4);
+background-color: rgba(0,0,0,0.7);
 margin-top: 10px;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -157,11 +174,23 @@ border: 5px solid #fff;
 margin-right: 5px;
 margin-bottom: 5px;
 }
+.gallery img:hover {
+border-bottom-style: none;
+color:black;
+opacity: 0.7;
+
+
+}
+.gallery a:hover {
+border-bottom-style: none;
+
+}
+
 
 /*body services*/
 
 .service {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   margin-top: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -190,7 +219,7 @@ text-decoration: none;
 
 a:hover {
   border-bottom-style: solid;
-  border-color: maroon;
+  border-color: rgb(80,0,0);
 }
 
 a {
@@ -217,8 +246,11 @@ border-color: maroon;
 
 footer  {
 text-align: center;
-
-
+background-color: rgba(0,0,0,0.7);
+padding-top: 10px;
+border-left-style: solid;
+border-color: rgb(80,0,0);
+border-width: 20px;
 }
 
 
@@ -229,7 +261,7 @@ footer img {
 }
 
 .wrap {
-  min-height: calc(100vh - 54px);
+  min-height: calc(100vh - 64px);
 
   }
 
@@ -243,7 +275,7 @@ footer img {
     margin: 0 auto;
 }
 .wrap {
-  min-height: calc(100vh - 54px);
+  min-height: calc(100vh - 64px);
 
   }
 
@@ -251,7 +283,7 @@ nav {
   float: right;
   padding-top: 7px;
   padding-bottom: 7px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.7);
   opacity: .9;
   display:inline-block;
   font-family: 'Droid Serif', serif;
