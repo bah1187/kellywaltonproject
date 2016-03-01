@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $('.unslider').unslider({
+  autoplay: true
+  });
+
    $(".i-nav").click(function(){
      $(".nav ul").slideToggle("slow", function(){
 
@@ -6,18 +10,4 @@ $(document).ready(function(){
 
   });
 
-
- });
-
- $(function() {
-    $('.jcarousel')
-        .jcarousel({
-            // Core configuration goes here
-        })
-        .jcarouselAutoscroll({
-            interval: 3000,
-            target: '+=1',
-            autostart: true
-        })
-    ;
 });
