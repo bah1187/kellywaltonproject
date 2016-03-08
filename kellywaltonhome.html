@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app ="myApp">
 
 <head>
   <title> Star Staging by Kelly Walton</title>
   <link rel= "stylesheet" href = "css/normalize.css">
-
   <link rel= "stylesheet" href = "css/kellywalton.css">
-  <link href="css/unslider.css" rel="stylesheet" />
-  <script src="http://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
-  <script src="javascript/unslider-min.js"></script>
-  <script src="javascript/inavapp.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+  <script src="javascript/myApp.js"></script>
 </head>
 
-<body class="home" ng-app ="inavApp" >
+<body class="home">
   <div class= "wrap">
   <header>
-      <div class = "container" ng-controller="navCtrl">
-        <div class="menu-icon"><a class="i-nav" href="#" ng-click="iclick"><img src = "images/menu-icon.png" alt = "Menu Icon"></a></div>
+      <div class = "container">
+    <a class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
 
 
 
       <div class="logo">  <img src = "images/starlogo1.png" alt = "Star Staging"></div>
-      <div class="nav">
+      <div class="box-one" ng-show= "test.showBoxOne">
       <ul>
         <li><a href="kellywaltonhome.html"> Home </a></li>
         <li><a href="about.html"> About </a></li>
@@ -44,29 +41,23 @@
   </header>
 
 
-    <div class="container2">
+    <div class="container2" ng-controller="SlideCtrl">
 
-      <div class="unslider">
-      <ul>
-        <li> <img src = "images/bedroom1.jpg" alt = "Bed Room"></li>
-        <li> <img src = "images/bedroom2.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom3.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom5.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom6.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom7.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom8.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom9.jpg" alt = "Bed Room"></li>
-         <li><img src = "images/bedroom10.jpg" alt = "Bed Room"></li>
-        <li> <img src = "images/diningroom1.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom2.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom3.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom4.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom5.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom6.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom7.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/diningroom8.jpg" alt = "Dining Room"></li>
-         <li><img src = "images/livingroom1.jpg" alt = "Living Room"></li>
-      </ul>
+      <div class="container slider">
+     <img ng-repeat="slide in slides" class="slide"
+        ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+        <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+        <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+        <nav class="nav1">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                    <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                      ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+            </ul>
+        </div>
+    </nav>
 
      </div>
 
