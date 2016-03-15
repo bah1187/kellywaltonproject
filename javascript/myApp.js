@@ -1,31 +1,23 @@
-// function navCtrl(){
-// var self = this;
-//
-// self.showBoxOne = false;
-//
-// }
-//
-//   angular.module("myApp",["ngAnimate"])
-//   .controller("TestCtrl",TestCtrl)
+
 
 
 angular.module('myApp', ['ngAnimate'])
   .controller('SlideCtrl', function ($scope) {
          $scope.slides = [
-             {image: 'images/bedroom1.jpg', description: 'Image 00'},
-             {image: 'images/bedroom2.jpg', description: 'Image 01'},
-             {image: 'images/bedroom3.jpg', description: 'Image 02'},
-             {image: 'images/bedroom4.jpg', description: 'Image 03'},
-             {image: 'images/bedroom5.jpg', description: 'Image 04'},
-             {image: 'images/bedroom6.jpg', description: 'Image 05'},
-             {image: 'images/bedroom7.jpg', description: 'Image 06'},
-             {image: 'images/bedroom8.jpg', description: 'Image 07'},
-             {image: 'images/bedroom9.jpg', description: 'Image 08'},
-             {image: 'images/bedroom10.jpg', description: 'Image 09'},
-             {image: 'images/diningroom1.jpg', description: 'Image 10'},
-             {image: 'images/diningroom2.jpg', description: 'Image 11'},
-             {image: 'images/diningroom3.jpg', description: 'Image 12'},
-             {image: 'images/diningroom4.jpg', description: 'Image 13'},
+            {image: 'images/diningroom4.jpg', description: 'Image 00'},
+            {image: 'images/livingroom.jpg', description: 'Image 01'},
+             {image: 'images/bedroom1.jpg', description: 'Image 02'},
+             {image: 'images/bedroom2.jpg', description: 'Image 03'},
+             {image: 'images/bedroom3.jpg', description: 'Image 04'},
+             {image: 'images/bedroom5.jpg', description: 'Image 05'},
+             {image: 'images/bedroom6.jpg', description: 'Image 06'},
+             {image: 'images/bedroom7.jpg', description: 'Image 07'},
+             {image: 'images/bedroom8.jpg', description: 'Image 08'},
+             {image: 'images/bedroom9.jpg', description: 'Image 09'},
+             {image: 'images/bedroom10.jpg', description: 'Image 10'},
+             {image: 'images/diningroom1.jpg', description: 'Image 11'},
+             {image: 'images/diningroom2.jpg', description: 'Image 12'},
+             {image: 'images/diningroom3.jpg', description: 'Image 13'},
              {image: 'images/diningroom5.jpg', description: 'Image 14'},
              {image: 'images/diningroom6.jpg', description: 'Image 15'},
              {image: 'images/diningroom7.jpg', description: 'Image 16'},

@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html ng-app ="myApp">
 
 <head>
   <title> Star Staging by Kelly Walton</title>
   <link rel= "stylesheet" href = "css/normalize.css">
   <link rel= "stylesheet" href = "css/kellywalton.css">
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
-  <script src="http://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
-    <script src= "javascript/kellywaltonjava.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+  <script src="javascript/myApp.js"></script>
 </head>
 
 <body>
   <div class= "wrap">
   <header>
       <div class = "container">
-        <div class="menu-icon"><a class="i-nav" href="#"><img src = "images/menu-icon.png" alt = "Menu Icon"></a></div>
+    <a class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
 
 
 
       <div class="logo">  <img src = "images/starlogo1.png" alt = "Star Staging"></div>
-      <div class="nav">
+      <div class="box-one" ng-show= "test.showBoxOne">
       <ul>
         <li><a href="kellywaltonhome.html"> Home </a></li>
         <li><a href="about.html"> About </a></li>
         <li><a href="portfolio.html"> Portfolio </a></li>
         <li><a href="contact.html"> Contact </a></li>
         <li><a href="services.html"> Services </a></li>
+      <div class="starline">
+        <img src = "images/star-16.png" alt = "">
+        <img src = "images/star-16.png" alt = "">
+        <img src = "images/star-16.png" alt = "">
+        <img src = "images/star-16.png" alt = "">
+      </div>
       </ul>
 
-      </div>
-
+    </div>
+    <div class="nav2">
+        <ul>
+          <li><a href="kellywaltonhome.html"> Home </a></li>
+          <li><a href="about.html"> About </a></li>
+          <li><a href="portfolio.html"> Portfolio </a></li>
+          <li><a href="contact.html"> Contact </a></li>
+          <li><a href="services.html"> Services </a></li>
+        <div class="starline">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+        </div>
+        </ul>
+    </div>
     </div>
   </header>
+
 
 
 
@@ -39,24 +61,24 @@
       <div class="gallery">
 
 
-            <a href= "images/bedroom1.jpg"><img src = "images/bedroom1.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom2.jpg">  <img src = "images/bedroom2.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom3.jpg">  <img src = "images/bedroom3.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom5.jpg">  <img src = "images/bedroom5.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom6.jpg">  <img src = "images/bedroom6.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom7.jpg">  <img src = "images/bedroom7.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom8.jpg">  <img src = "images/bedroom8.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom9.jpg">  <img src = "images/bedroom9.jpg" alt = "Bed Room"></a>
-          <a href= "images/bedroom10.jpg">  <img src = "images/bedroom10.jpg" alt = "Bed Room"></a>
-          <a href= "images/diningroom1.jpg">  <img src = "images/diningroom1.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom2.jpg">  <img src = "images/diningroom2.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom3.jpg"><img src = "images/diningroom3.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom4.jpg"><img src = "images/diningroom4.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom5.jpg"><img src = "images/diningroom5.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom6.jpg"><img src = "images/diningroom6.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom7.jpg"><img src = "images/diningroom7.jpg" alt = "Dining Room"></a>
-          <a href= "images/diningroom8.jpg"> <img src = "images/diningroom8.jpg" alt = "Dining Room"></a>
-          <a href= "images/livingroom1.jpg"><img src = "images/livingroom1.jpg" alt = "Living Room"></a>
+            <a href= "images/bedroom1.jpg"><img src = "assets/bedroom1.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom2.jpg">  <img src = "assets/bedroom2.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom3.jpg">  <img src = "assets/bedroom3.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom5.jpg">  <img src = "assets/bedroom5.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom6.jpg">  <img src = "assets/bedroom6.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom7.jpg">  <img src = "assets/bedroom7.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom8.jpg">  <img src = "assets/bedroom8.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom9.jpg">  <img src = "assets/bedroom9.jpg" alt = "Bed Room"></a>
+          <a href= "images/bedroom10.jpg">  <img src = "assets/bedroom10.jpg" alt = "Bed Room"></a>
+          <a href= "images/diningroom1.jpg">  <img src = "assets/diningroom1.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom2.jpg">  <img src = "assets/diningroom2.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom3.jpg"><img src = "assets/diningroom3.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom4.jpg"><img src = "assets/diningroom4.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom5.jpg"><img src = "assets/diningroom5.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom6.jpg"><img src = "assets/diningroom6.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom7.jpg"><img src = "assets/diningroom7.jpg" alt = "Dining Room"></a>
+          <a href= "images/diningroom8.jpg"> <img src = "assets/diningroom8.jpg" alt = "Dining Room"></a>
+          <a href= "images/livingroom1.jpg"><img src = "assets/livingroom1.jpg" alt = "Living Room"></a>
 
       </div>
     </div>
