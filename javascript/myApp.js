@@ -45,6 +45,7 @@ angular.module('myApp', ['ngAnimate'])
              $scope.direction = 'right';
              $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
          };
+
      })
      .animation('.slide-animation', function () {
          return {
