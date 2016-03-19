@@ -110,7 +110,7 @@ box-sizing: border-box;
 
 body{
 background: url("images1/background.jpg") no-repeat center;
-background-size: 100% 350px;
+background-size: 100% auto;
 background-color: #1a1a1a;
 color:#fff;
 background-attachment: fixed;
@@ -129,13 +129,13 @@ display: none;
 
 .slider img {
 width:100%;
-height:auto;
+height:400px;
 
 }
 
 .slider {
     width: 100%;
-    height: auto;
+    height: 400px;
     overflow: hidden;
     position: relative;
     background: #e6e6e6;
@@ -356,6 +356,15 @@ color: white;
 
 }
 
+input,.input{
+color: black;
+
+}
+
+.success{color:#2ECC40;}
+    .error{color:#FF4136;}
+    .warning{color:#FF851B;}
+
 /*links*/
  a:visited {
 text-decoration: none;
@@ -481,9 +490,9 @@ background-color: rgba(0,0,0,0.7);
 
 }
 
-/*.slider img {
-  /*height: 450px;*/
-}*/
+.slider img {
+  height: 450px;
+}
 
 .menu-icon{
 display: none;
