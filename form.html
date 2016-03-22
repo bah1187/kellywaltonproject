@@ -3,9 +3,9 @@
 <head>
 
   <title>AJAX Flickr Photo Feeder</title>
-  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel= "stylesheet" href = "css/normalize.css">
   <link rel= "stylesheet" href = "css/kellywalton.css">
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
@@ -18,7 +18,7 @@
     <div class= "wrap">
     <header>
         <div class = "container">
-      <a class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
+      <a href="#"class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
 
 
 
@@ -67,18 +67,24 @@
             <li><a href="#" class="flick">Home Staging</a></li>
 
           </ul>
-
-
-        <div id="photos">
-          <div class="form">
+<div class="form">
           <form>
             <label for="search">Type a search term</label>
             <input type="search" name="search" id="search">
             <input type="submit" value="Search" id="submit">
           </form>
         </div>
+        <div id="photos">
+          <div class="form">
+
+          <!-- <form>
+            <label for="search">Type a search term</label>
+            <input type="search" name="search" id="search">
+            <input type="submit" value="Search" id="submit">
+          </form> -->
         </div>
         </div>
+
       </div>
     </div>
   </div>

@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app ="myApp">
 
 <head>
   <title> Star Staging by Kelly Walton</title>
   <link rel= "stylesheet" href = "css/normalize.css">
   <link rel= "stylesheet" href = "css/kellywalton.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
-  <script src="javascript/mailgun_validator.js"></script>
-  <script src="javascript/kellywaltonjava.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+  <script src="javascript/myApp.js"></script>
+
+
 </head>
 
 <body>
   <div class= "wrap">
   <header>
       <div class = "container">
-    <a class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
+    <a  href="#" class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
 
 
 
@@ -63,26 +66,13 @@
 
     <div class="container">
 
-      <form class="contact_form" action="#" method="POST" enctype="multipart/form-data">
-      	<div class="row">
-      		<label class="formLabel" for="name">Your name:</label><br />
-      		<input id="name" class="input" name="name" type="text" value="" size="30" /><br />
-      	</div>
-      	<div class="row">
-      		<label class="formLabel" for="email">Your email:</label><br />
-      		<input id="email" class="input" name="email" type="text" value="" size="30" /><br />
-      	</div>
-      	<div class="row">
-      		<label class="formLabel" for="message">Your message:</label><br />
-      		<textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
-      	</div>
-      	<button id="validate_submit" type="submit" value="Send email" />Submit</button>
-      </form>
+      <div class="contact_form">
+<h2>General info</h2>
 
 
     </div>
 
-    <a data-pin-do="embedUser" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://www.pinterest.com/pinterest/"></a>
+
 
 </div>
 </div>
