@@ -1,94 +1,86 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Advanced jQuery Email Address Validator by Mailgun</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
-    <style>
-    .success{color:#2ECC40;}
-    .error{color:#FF4136;}
-    .warning{color:#FF851B;}
-    </style>
-  </head>
+<html ng-app ="myApp">
+<head>
 
+  <title>AJAX Flickr Photo Feeder</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel= "stylesheet" href = "css/normalize.css">
+  <link rel= "stylesheet" href = "css/kellywalton.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+<script src="javascript/myApp.js"></script>
+  <script src="javascript/flickr.js"></script>
+    <script src="javascript/flickrsearch.js"></script>
+</head>
+<body>
   <body>
-    <h1>Advanced jQuery Email Address Validator by Mailgun</h1>
-    <form>
-      <div>
-        <label for="email">Email address</label><br>
-        <input type="email" name="email" id="email">
-        <div id="status"></div>
-      </div>
-      <div>
-        <button type="submit" id="validate_submit">Validate</button>
-      </div>
-    </form>
+    <div class= "wrap">
+    <header>
+        <div class = "container">
+      <a class="menu-icon" ng-click="test.showBoxOne = !test.showBoxOne"><img src = "images/menu-icon.png" alt = "Menu Icon"></a>
 
-    <p>Try some invalid addresses:
-      <ul>
-        <li><strong>john@gmail.com</strong>: Does not meet Gmail minimum local-part length of 6 characters.</li>
-        <li><strong>john.smith@gmaill.com</strong>: Invalid, because gmaill.com does not have valid MX records.</li>
-        <li><strong>john@microsoft.io</strong>: Invalid because while microsoft.io does not have any MX records, it does have fallback A records, but alas no Mail Exchanger responds.</li>
-      </ul>
-    </p>
-    <p>Try some valid addresses:
-      <ul>
-        <li><strong>john.smith@gmail.com</strong>: Meets Gmail 6 character minimum and all other requirements.</li>
-        <li><strong>"hello world"@domain.com</strong>: Meets pure syntax checks.</li>
-      </ul>
-    </p>
-    <p>Remember to <a href="http://www.mailgun.com">sign up for Mailgun</a> to receive your public API key.</p>
 
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="javascript/mailgun_validator.js"></script>
-    <script>
-      // document ready
-      $(function() {
-        // capture all enter and do nothing
-        $('#email').keypress(function(e) {
-          if(e.which == 13) {
-            $('#email').trigger('focusout');
-            return false;
-          }
-        });
-        // capture clicks on validate and do nothing
-        $("#validate_submit").click(function() {
-          return false;
-        });
-        // attach jquery plugin to validate address
-        $('#email').mailgun_validator({
-          api_key: 'pubkey-c078e09275f69bdf0dfcbb04c419f877', // replace this with your Mailgun public API key
-          in_progress: validation_in_progress,
-          success: validation_success,
-          error: validation_error,
-        });
-      });
-      // while the lookup is performing
-      function validation_in_progress() {
-        $('#status').html("<img src='loading.gif' height='16'/>");
-      }
-      // if email successfull validated
-      function validation_success(data) {
-        $('#status').html(get_suggestion_str(data['is_valid'], data['did_you_mean']));
-      }
-      // if email is invalid
-      function validation_error(error_message) {
-        $('#status').html(error_message);
-      }
-      // suggest a valid email
-      function get_suggestion_str(is_valid, alternate) {
-        if (is_valid) {
-          var result = '<span class="success">Address is valid.</span>';
-          if (alternate) {
-            result += '<span class="warning"> (Though did you mean <em>' + alternate + '</em>?)</span>';
-          }
-          return result
-        } else if (alternate) {
-          return '<span class="warning">Did you mean <em>' +  alternate + '</em>?</span>';
-        } else {
-          return '<span class="error">Address is invalid.</span>';
-        }
-      }
-    </script>
-  </body>
-  </html>
+
+        <div class="logo">  <img src = "images/starlogo1.png" alt = "Star Staging"></div>
+        <div class="box-one" ng-show= "test.showBoxOne">
+        <ul>
+          <li><a href="kellywaltonhome.html"> Home </a></li>
+          <li><a href="about.html"> About </a></li>
+          <li><a href="portfolio.html"> Portfolio </a></li>
+          <li><a href="contact.html"> Contact </a></li>
+          <li><a href="services.html"> Services </a></li>
+          <li><a href="form.html">Inspiration </a></li>
+        <div class="starline">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+          <img src = "images/star-16.png" alt = "">
+        </div>
+        </ul>
+
+      </div>
+      <div class="nav2">
+          <ul>
+            <li><a href="kellywaltonhome.html"> Home </a></li>
+            <li><a href="about.html"> About </a></li>
+            <li><a href="portfolio.html"> Portfolio </a></li>
+            <li><a href="contact.html"> Contact </a></li>
+            <li><a href="services.html"> Services </a></li>
+            <li><a href="form.html">Inspiration </a></li>
+          <div class="starline">
+            <img src = "images/star-16.png" alt = "">
+            <img src = "images/star-16.png" alt = "">
+            <img src = "images/star-16.png" alt = "">
+            <img src = "images/star-16.png" alt = "">
+          </div>
+          </ul>
+      </div>
+      </div>
+    </header>
+
+
+      <div class="container">
+        <div class="flickrContain">
+          <ul class="filter-select">
+            <li><a href="#" class="flick">Home Ideas</a></li>
+            <li><a href="#" class="flick">Home Staging</a></li>
+
+          </ul>
+
+
+        <div id="photos">
+          <div class="form">
+          <form>
+            <label for="search">Type a search term</label>
+            <input type="search" name="search" id="search">
+            <input type="submit" value="Search" id="submit">
+          </form>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
