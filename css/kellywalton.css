@@ -140,7 +140,7 @@ height:400px;
     position: relative;
     background: #e6e6e6;
 
-    margin-top: 65px;
+    margin-top: 20%;
 }
 
 .slide {
@@ -342,28 +342,37 @@ border-bottom-style: none;
 
 /*Body contact*/
 .contact_form {
-text-align: center;
-background-color: rgba(0,0,0,0.7);
+display: block;
+
 margin-top: 100px;
 padding-top: 10px;
 padding-bottom: 10px;
 
 }
 
-.formLabel {
-color: white;
+.generalInfo{
+float: left;
+width: 50%;
+background-color: rgba(0,0,0,0.7);
+padding-left: 10px;
+padding-bottom: 6px;
+}
 
+.contactDetails{
+float:right;
+width: 50%;
+background-color: rgba(0,0,0,0.7);
+padding-left: 10px;
+}
+
+.phone,.mail,.twitter{
+height: 30px;
 
 }
 
-input,.input{
-color: black;
 
-}
 
-.success{color:#2ECC40;}
-    .error{color:#FF4136;}
-    .warning{color:#FF851B;}
+
 
 /*links*/
  a:visited {
@@ -374,6 +383,12 @@ text-decoration: none;
 a:hover {
   border-bottom-style: solid;
   border-color: rgb(80,0,0);
+}
+
+.selected{
+border-bottom-style: solid;
+border-color: rgb(80,0,0);
+
 }
 
 a {
@@ -422,6 +437,8 @@ footer img {
   }
 
 
+/*Inspiration page*/
+
 #photos li {
   margin: 30px 0 0;
   text-align: center;
@@ -463,7 +480,10 @@ footer img {
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
+input{
+color: black;
 
+}
 
 .filter-select li {
 display: inline-block;
@@ -492,7 +512,15 @@ text-align: center;
 .flickrContain{
 background-color: rgba(0,0,0,0.7);
 padding-bottom: 10px;
-margin-top: 100px;
+margin-top: 25px;
+}
+
+.inspiration{
+background-color: rgba(0,0,0,0.7);
+text-align: center;
+padding-bottom: 5px;
+padding-top: 2px;
+margin-top: 10px;
 }
 /*Media queries*/
 /*tablet*/
